@@ -59,7 +59,7 @@ jobs:
       - name: Validate OpenAPI spec
         run: npx @apidevtools/swagger-cli validate api/openapi.bundled.json
       - name: Dockerfile Lint
-        uses: hadolint/hadolint-action@v3.1.0
+        uses: hadolint/hadolint-action@v3.3.0
         with:
           dockerfile: build/docker/server.Dockerfile
       - name: Set up Helm
