@@ -76,7 +76,7 @@ jobs:
       - name: Helm Template
         run: helm template retrowin ./deployment/charts/retrowin
       - name: GoReleaser check
-        uses: goreleaser/goreleaser-action@v7.2.2
+        uses: goreleaser/goreleaser-action@v7.2.3
         with:
           version: "~> v2"
           args: check
