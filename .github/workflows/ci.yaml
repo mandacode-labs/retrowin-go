@@ -94,7 +94,7 @@ jobs:
       - name: Download dependencies
         run: go mod download
       - name: Run unit tests
-          run: make test
+        run: make test
       - name: Upload coverage
         uses: codecov/codecov-action@v7.0.0
         if: always()
