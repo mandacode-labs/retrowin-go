@@ -39,7 +39,6 @@ func (User) Fields() []ent.Field {
 
 		// Username for display
 		field.String("username").
-			Unique().
 			MaxLen(32),
 
 		// OIDC provider info

@@ -70,7 +70,6 @@ func (u *User) UpdatedAt() time.Time { return u.updatedAt }
 type UserService interface {
 	Get(ctx context.Context, provider, providerID string) (*User, error)
 	GetByID(ctx context.Context, id string) (*User, error)
-	GetByUsername(ctx context.Context, username string) (*User, error)
 	Create(ctx context.Context, cmd *CreateCommand) (*User, error)
 	Delete(ctx context.Context, provider, providerID string) error
 	FindOrCreateByOIDC(ctx context.Context, provider, subject, username string) (string, error)
@@ -107,17 +106,6 @@ func (s *service) Get(ctx context.Context, provider, providerID string) (*User, 
 
 func (s *service) GetByID(ctx context.Context, id string) (*User, error) {
 	user, err := s.repo.GetByID(ctx, id)
-	if err != nil {
-		return nil, err
-	}
-	if user == nil {
-		return nil, errors.NotFound("user not found")
-	}
-	return user, nil
-}
-
-func (s *service) GetByUsername(ctx context.Context, username string) (*User, error) {
-	user, err := s.repo.GetByUsername(ctx, username)
 	if err != nil {
 		return nil, err
 	}

@@ -48,20 +48,6 @@ func (r *EntRepository) GetByID(ctx context.Context, id string) (*domain.User, e
 	return fromEnt(entUser), nil
 }
 
-func (r *EntRepository) GetByUsername(ctx context.Context, username string) (*domain.User, error) {
-	entUser, err := r.client.User.
-		Query().
-		Where(entuser.Username(username)).
-		Only(ctx)
-	if err != nil {
-		if ent.IsNotFound(err) {
-			return nil, nil
-		}
-		return nil, fmt.Errorf("failed to get user: %w", err)
-	}
-	return fromEnt(entUser), nil
-}
-
 func (r *EntRepository) GetByProvider(ctx context.Context, provider, providerID string) (*domain.User, error) {
 	entUser, err := r.client.User.
 		Query().
