@@ -70,7 +70,7 @@ jobs:
         with:
           dockerfile: build/docker/server.Dockerfile
       - name: Set up Helm
-        uses: azure/setup-helm@v5.0.0
+        uses: azure/setup-helm@v5.0.1
       - name: Lint Helm chart
         run: helm lint deployment/charts/retrowin
       - name: Helm Template
@@ -193,7 +193,7 @@ jobs:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
       - name: Set up Helm
-        uses: azure/setup-helm@v5.0.0
+        uses: azure/setup-helm@v5.0.1
       - name: Install kind
         uses: helm/kind-action@v1.14.0
         with:
