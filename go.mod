@@ -1,9 +1,9 @@
 module github.com/mandacode-labs/retrowin-go
 
-go 1.26.1
+go 1.26.4
 
 require (
-	ariga.io/atlas v1.2.2
+	ariga.io/atlas v1.2.3
 	entgo.io/ent v0.14.6
 	github.com/XSAM/otelsql v0.42.0
 	github.com/aws/aws-sdk-go-v2 v1.42.1
