@@ -24,9 +24,9 @@ require (
 	github.com/spf13/viper v1.21.0
 	github.com/stretchr/testify v1.11.1
 	github.com/swaggo/http-swagger v1.3.4
-	github.com/testcontainers/testcontainers-go v0.42.0
+	github.com/testcontainers/testcontainers-go v0.43.0
 	github.com/testcontainers/testcontainers-go/modules/postgres v0.42.0
-	github.com/testcontainers/testcontainers-go/modules/valkey v0.42.0
+	github.com/testcontainers/testcontainers-go/modules/valkey v0.43.0
 	github.com/valkey-io/valkey-go v1.0.75
 	github.com/vektra/mockery/v2 v2.53.6
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.69.0
