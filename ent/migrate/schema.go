@@ -171,7 +171,7 @@ var (
 		{Name: "id", Type: field.TypeString, Unique: true},
 		{Name: "create_time", Type: field.TypeTime},
 		{Name: "update_time", Type: field.TypeTime},
-		{Name: "username", Type: field.TypeString, Unique: true, Size: 32},
+		{Name: "username", Type: field.TypeString, Size: 32},
 		{Name: "provider", Type: field.TypeString, Size: 32},
 		{Name: "provider_id", Type: field.TypeString, Size: 255},
 		{Name: "join_date", Type: field.TypeTime},
